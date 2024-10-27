@@ -1,0 +1,15 @@
+{
+    "name": "wbtestedelogin",
+    "version": "1.0.0",
+    "description": "Projeto para teste de login com funções serverless",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Seu Nome",
+    "license": "ISC",
+    "dependencies": {
+      "@octokit/rest": "^19.0.0"
+    }
+  }
+  
