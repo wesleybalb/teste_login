@@ -17,6 +17,21 @@
         <br>
         <br>
         <p>Usuário Logado</p>
+
+        <p id="usuarioLogado">Usuário Logado: </p>
+
+<script>
+    const usuarioLogado = sessionStorage.getItem("usuarioLogado");
+
+    if (usuarioLogado) {
+        document.getElementById("usuarioLogado").textContent = `Usuário Logado: ${usuarioLogado}`;
+    } else {
+        alert("Nenhum usuário logado. Redirecionando para a página de login.");
+        window.location.href = "index.html";
+    }
+</script>
+
+
         <div>
             <div></div>
             <div></div>

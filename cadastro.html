@@ -42,4 +42,24 @@
 
 
 </body>
+<script>
+    async function cadastro() {
+        const login = document.getElementById("login").value;
+        const senha = document.getElementById("senha").value;
+
+        const response = await fetch("/.netlify/functions/registerUser", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ login, senha })
+        });
+
+        if (response.ok) {
+            alert("Cadastro realizado com sucesso!");
+            window.location.href = "index.html";
+        } else {
+            alert("Erro no cadastro. Tente novamente.");
+        }
+    }
+</script>
+
 </html>

@@ -43,4 +43,25 @@
 
 
 </body>
+<script>
+    async function login() {
+        const login = document.getElementById("login").value;
+        const senha = document.getElementById("senha").value;
+
+        const response = await fetch("/.netlify/functions/loginUser", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ login, senha })
+        });
+
+        if (response.ok) {
+            sessionStorage.setItem("usuarioLogado", login);
+            alert("Login realizado com sucesso!");
+            window.location.href = "main.html";
+        } else {
+            alert("Login ou senha incorretos.");
+        }
+    }
+</script>
+
 </html>
